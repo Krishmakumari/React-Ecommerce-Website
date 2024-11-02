@@ -1,0 +1,29 @@
+.selectdrop-container {
+    position: relative;
+    cursor: pointer;
+}
+  
+.selectdrop-menu {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    margin-top: 5px;
+    z-index: 1000;
+    display: block; /* Ensures visibility */
+}
+  
+  .selectdrop-item {
+    padding: 8px 12px;
+    color: #333;
+    transition: background-color 0.2s;
+  }
+  
+  .selectdrop-item:hover {
+    background-color: #f0f0f0;
+  }
+  
