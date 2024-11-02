@@ -11,64 +11,63 @@ function Header() {
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
-    console.log("Dropdown state:", !isDropdownOpen); // Check dropdown toggle state
+    console.log("Dropdown state:", !isDropdownOpen);
   };
 
   return (
-    <>
-      <header>
-        <div className='container-fluid'>
-          <div className='row align-items-center'>
-            {/* Logo Section */}
-            <div className='col-sm-2 logo-container'>
-              <img src={Logo} alt="Logo" style={{ maxWidth: '100%', height: 'auto' }} />
-            </div>
-
-            {/* Header Search */}
-            <div className='col-sm-5'>
-              <div className='headerSearch'>
-                {/* Toggle Dropdown on Click */}
-                <div
-                  className='selectdrop-container cursor position-relative'
-                  onClick={toggleDropdown}
-                >
-                  All categories 
+    <header>
+      <div className='container-fluid'>
+        <div className='row align-items-center'>
+          {/* Logo Section */}
+          <div className='col-sm-2 logo-container'>
+            <img src={Logo} alt="Logo" style={{ maxWidth: '100%', height: 'auto' }} />
+          </div>
+          <div className='col-sm-9'>
+            <div className='headerSearch'>
+              {/* Combined Categories Dropdown and Search Input */}
+              <div className='search-container'>
+                {/* Categories Dropdown */}
+                <div className='selectdrop-container' onClick={toggleDropdown}>
+                  <span className='selectdrop'>All Categories</span>
                   <Selectdrop isOpen={isDropdownOpen} />
                 </div>
-                
+
+                {/* Search Box */}
                 <div className='search'>
-                  <input type='text' placeholder="Search for items..." />
+                  <input type='text' placeholder="Search..." />
+                  <SearchIcon className='search-icon' />
                 </div>
               </div>
-            </div>
 
-            {/* Location Input */}
-            <div className='col-sm-5'>
+              {/* Location Input */}
               <div className='location'>
-                <div className='location-icon'>
-                  <SearchIcon />
-                </div>
                 <div className='locationsearch'>
                   <input type='text' placeholder="Locations" />
                 </div>
-              </div>             
-            </div>
-            <div className='wishlist'>
-              <Wishlist />
-               Wishlist
-            </div>
-            <div className='cart'>
-              <Cart/>
-              Cart
-            </div>
-            <div className='signin'>
-              <button  className='btn btn-primary'>Sign In</button>
+              </div>
 
+              {/* Wishlist and Cart */}
+              <div className='header-actions'>
+                <div className='wishlist'>
+                  <Wishlist />
+                  Wishlist
+                </div>
+                
+                <div className='cart'>
+                  <Cart />
+                  Cart
+                </div>
+
+                {/* Sign In Button */}
+                <div className='signin'>
+                  <button className='btn btn-primary'>Sign In</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 }
 
