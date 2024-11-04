@@ -1,4 +1,3 @@
-// Assuming you have combined logic for categories and locations in Selectdrop.js
 import React, { useState } from 'react';
 import '../header/header.css';
 import Logo from '../../assets/logo.jpg';
@@ -10,47 +9,57 @@ import DownArrow from '@mui/icons-material/KeyboardArrowDown';
 import LocationIcon from '@mui/icons-material/LocationOn';
 
 function Header() {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isCategoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
+  const [isLocationDropdownOpen, setLocationDropdownOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All Categories');
-  const [isLocationOpen, setLocationOpen] = useState(false);
-  const [selectedLocation, setSelectedLocation] = useState('Select Location');
+  const [selectedLocation, setSelectedLocation] = useState('Locations');
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen);
+  const toggleCategoryDropdown = () => {
+    setCategoryDropdownOpen(!isCategoryDropdownOpen);
+    setLocationDropdownOpen(false); // Close location dropdown if open
+  };
+
+  const toggleLocationDropdown = () => {
+    setLocationDropdownOpen(!isLocationDropdownOpen);
+    setCategoryDropdownOpen(false); // Close category dropdown if open
   };
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
-    setDropdownOpen(false);
-  };
-
-  const toggleLocationDropdown = () => {
-    setLocationOpen(!isLocationOpen);
+    setCategoryDropdownOpen(false); // Close the dropdown after selection
   };
 
   const handleLocationSelect = (location) => {
     setSelectedLocation(location);
-    setLocationOpen(false);
+    setLocationDropdownOpen(false); // Close the dropdown after selection
   };
 
   return (
     <header>
       <div className='container-fluid'>
         <div className='row align-items-center'>
+          {/* Logo Section */}
           <div className='col-sm-2 logo-container'>
             <img src={Logo} alt="Logo" style={{ maxWidth: '100%', height: 'auto' }} />
           </div>
           <div className='col-sm-9'>
             <div className='headerSearch'>
+              {/* Combined Categories Dropdown and Search Input */}
               <div className='search-container'>
-                <div className='selectdrop-container' onClick={toggleDropdown}>
+                {/* Categories Dropdown */}
+                <div className='selectdrop-container' onClick={toggleCategoryDropdown}>
                   <span className='selectdrop'>
                     {selectedCategory}
                     <DownArrow className='down-arrow-icon' />
                   </span>
-                  <Selectdrop isOpen={isDropdownOpen} onSelect={handleCategorySelect} />
+                  <Selectdrop 
+                    isOpen={isCategoryDropdownOpen} 
+                    onSelect={handleCategorySelect} 
+                    type="categories" // Set type to categories
+                  />
                 </div>
 
+                {/* Search Box */}
                 <div className='search'>
                   <input type='text' placeholder="Search..." />
                   <SearchIcon className='search-icon' />
@@ -59,18 +68,21 @@ function Header() {
 
               {/* Location Input */}
               <div className='location'>
-                <div className='locationsearch'>
+                <div className='locationsearch' onClick={toggleLocationDropdown}>
                   <LocationIcon className='location-icon' />
-                  <div className='selectdrop-container' onClick={toggleLocationDropdown}>
-                    <span className='selectdrop'>
-                      {selectedLocation}
-                      <DownArrow className='down-arrow-icon' />
-                    </span>
-                    <Selectdrop isOpen={isLocationOpen} onSelect={handleLocationSelect} />
-                  </div>
+                  <span className='selectdrop'>
+                    {selectedLocation}
+                    <DownArrow className='down-arrow-icon' />
+                  </span>
+                  <Selectdrop 
+                    isOpen={isLocationDropdownOpen} 
+                    onSelect={handleLocationSelect} 
+                    type="locations" // Set type to locations
+                  />
                 </div>
               </div>
 
+              {/* Wishlist and Cart */}
               <div className='header-actions'>
                 <div className='wishlist'>
                   <Wishlist />
@@ -82,6 +94,7 @@ function Header() {
                   Cart
                 </div>
 
+                {/* Sign In Button */}
                 <div className='signin'>
                   <button className='btn btn-primary'>Sign In</button>
                 </div>

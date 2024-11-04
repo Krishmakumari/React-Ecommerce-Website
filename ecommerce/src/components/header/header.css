@@ -1,8 +1,11 @@
+/* header.css */
 header {
     width: 100%;
     height: 80px;
     margin: auto;
     padding: 15px 0;
+    background-color: #f8f8f8; /* Background color for header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 .container-fluid .row {
@@ -32,26 +35,28 @@ header .headerSearch .search-container {
 header .headerSearch .selectdrop-container {
     width: 180px; /* Adjust width as needed */
     height: 50px;
-
     border-radius: 12px 0 0 12px; /* Rounded corners only on the left */
     display: flex;
     align-items: center;
     justify-content: center; /* Center the text */
     cursor: pointer; /* Pointer cursor to indicate it's clickable */
+    background-color: white; /* Background for the dropdown */
+    border: 1px solid #3bb77e; /* Border to match search input */
 }
 
-header .headerSearch .selectdrop-container .selectdrop{
+header .headerSearch .selectdrop-container .selectdrop {
     display: flex;
     align-items: center;
 }
+
 .down-arrow-icon {
     margin-left: 5px; /* Adjust spacing as needed */
-  }
+}
 
 header .headerSearch .search {
     flex-grow: 1; /* Allow search input to grow */
     position: relative; /* Required for absolute positioning of icon */
-    border: 1px solid #3bb77e; /* Same border for continuity */
+    border: 1px solid #3bb77e; /* Border for continuity */
     border-radius: 0 12px 12px 0; /* Rounded corners only on the right */
     overflow: hidden; /* Hide overflow */
 }
@@ -77,14 +82,20 @@ header .headerSearch .search input {
 header .location {
     display: flex; 
     align-items: center; 
-    height: 45px;
+    height: 50px; /* Match the height of other elements */
     border: 1px solid #3bb77e;
     border-radius: 12px;
     margin-left: 10px; /* Spacing between search and location */
     padding: 0 10px; /* Padding for location input */
+    background-color: white; /* Background for the location input */
 }
 
-header .locationsearch input {
+header .locationsearch {
+    display: flex;
+    align-items: center; 
+}
+
+.header .locationsearch input {
     width: 100%;
     height: 40px;
     border: 0;
@@ -93,16 +104,10 @@ header .locationsearch input {
     font-size: 14px;   
 }
 
-.locationsearch {
-    display: flex;
-    align-items: center;
-  }
-  
-  .location-icon {
+.location-icon {
     margin-right: 5px; /* Adjust spacing as needed */
-  }
-  
-/* Additional styles for wishlist and cart */
+}
+
 .header-actions {
     display: flex; 
     align-items: center; 
@@ -133,4 +138,24 @@ header .locationsearch input {
 /* Hover effect */
 .signin .btn:hover {
     background-color: #2c865c; 
+}
+
+/* Dropdown Menu Styles */
+.selectdrop-menu {
+    position: absolute; /* Ensure dropdown is positioned absolutely */
+    background: white; /* Background color for visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+    z-index: 1000; /* Ensure it appears above other elements */
+    width: 100%; /* Full width of the container */
+    max-height: 200px; /* Optional max height for the dropdown */
+    overflow-y: auto; /* Allow scrolling if there are many items */
+}
+
+.selectdrop-item {
+    padding: 10px; /* Padding for items */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.selectdrop-item:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
 }
