@@ -4,10 +4,11 @@
 }
 
 .selectdrop-menu {
+  top: 52px;
   position: absolute; 
   background: white; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 100%; 
+  width: 200px; 
   max-height: 200px;
   overflow-y: auto; 
 }
