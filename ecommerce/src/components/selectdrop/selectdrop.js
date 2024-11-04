@@ -1,16 +1,31 @@
+// Selectdrop.js
 import React from 'react';
-import '../selectdrop/selectdrop.css';
+import './selectdrop.css';
 
-const Selectdrop = ({ isOpen }) => {
+const Selectdrop = ({ isOpen, onSelect, type }) => {
   if (!isOpen) return null;
+
+  // Define options for categories and locations
+  const options = type === "categories" ? 
+    ["All Categories", "Electronics", "Fashion", "Books", "Home Appliances", "Sports"] : 
+    [
+      "Gujarat", "Haryana", "Himachal Pradesh",
+      "Maharashtra",
+       "Punjab", "Rajasthan",
+       "Uttar Pradesh", "Uttarakhand", "West Bengal"
+    ];
 
   return (
     <div className="selectdrop-menu">
-      <div className="selectdrop-item">Electronics</div>
-      <div className="selectdrop-item">Fashion</div>
-      <div className="selectdrop-item">Books</div>
-      <div className="selectdrop-item">Home Appliances</div>
-      <div className="selectdrop-item">Sports</div>
+      {options.map((option) => (
+        <div
+          key={option}
+          className="selectdrop-item"
+          onClick={() => onSelect(option)}
+        >
+          {option}
+        </div>
+      ))}
     </div>
   );
 };

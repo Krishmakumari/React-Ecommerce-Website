@@ -30,15 +30,23 @@ header .headerSearch .search-container {
 }
 
 header .headerSearch .selectdrop-container {
-    width: 120px; /* Adjust width as needed */
+    width: 180px; /* Adjust width as needed */
     height: 50px;
-    border: 1px solid #3bb77e;
+
     border-radius: 12px 0 0 12px; /* Rounded corners only on the left */
     display: flex;
     align-items: center;
     justify-content: center; /* Center the text */
     cursor: pointer; /* Pointer cursor to indicate it's clickable */
 }
+
+header .headerSearch .selectdrop-container .selectdrop{
+    display: flex;
+    align-items: center;
+}
+.down-arrow-icon {
+    margin-left: 5px; /* Adjust spacing as needed */
+  }
 
 header .headerSearch .search {
     flex-grow: 1; /* Allow search input to grow */
@@ -85,6 +93,15 @@ header .locationsearch input {
     font-size: 14px;   
 }
 
+.locationsearch {
+    display: flex;
+    align-items: center;
+  }
+  
+  .location-icon {
+    margin-right: 5px; /* Adjust spacing as needed */
+  }
+  
 /* Additional styles for wishlist and cart */
 .header-actions {
     display: flex; 
