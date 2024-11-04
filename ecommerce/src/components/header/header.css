@@ -42,6 +42,7 @@ header .headerSearch .selectdrop-container {
     cursor: pointer; /* Pointer cursor to indicate it's clickable */
     background-color: white; /* Background for the dropdown */
     border: 1px solid #3bb77e; /* Border to match search input */
+    box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 header .headerSearch .selectdrop-container .selectdrop {
@@ -59,6 +60,7 @@ header .headerSearch .search {
     border: 1px solid #3bb77e; /* Border for continuity */
     border-radius: 0 12px 12px 0; /* Rounded corners only on the right */
     overflow: hidden; /* Hide overflow */
+    box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 header .headerSearch .search input {
@@ -88,6 +90,7 @@ header .location {
     margin-left: 10px; /* Spacing between search and location */
     padding: 0 10px; /* Padding for location input */
     background-color: white; /* Background for the location input */
+    box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 header .locationsearch {

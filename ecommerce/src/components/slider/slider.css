@@ -1,0 +1,79 @@
+/* Slider container covering full screen */
+.slider {
+    position: relative;
+    width: 100vw;           /* Full viewport width */
+    height: 100vh;          /* Full viewport height */
+    overflow: hidden;
+    padding: 15px;
+}
+
+/* Centering and sizing content */
+.slider-content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fullscreen image styling */
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Ensures the image covers the full slider area */
+    transition: transform 0.5s ease-in-out;
+    border-radius: 25px;
+}
+
+/* Navigation arrows styling */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;            /* Ensures arrows appear above the image */
+    border-radius: 50%;     /* Makes arrows circular */
+}
+
+/* Positioning of left and right arrows */
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+/* Dots container for navigation */
+.slider-dots {
+    position: absolute;
+    left: 50%;
+    top: 59%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Space between dots */
+    z-index: 10; /* Ensure the dots appear above the image */
+}
+
+/* Dot styling */
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Active dot styling */
+.dot.active {
+    background-color: #717171;
+}
