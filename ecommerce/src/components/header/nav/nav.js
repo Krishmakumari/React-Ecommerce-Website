@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './nav.css';
 import GridViewIcon from '@mui/icons-material/GridView';
 import PhoneIcon from '@mui/icons-material/Phone';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -24,19 +25,19 @@ const Nav = () => {
           </button>
           {isDropdownOpen && (
             <div className="dropdown-content" onMouseLeave={closeDropdown}>
-              <a href="#electronics">Electronics</a>
-              <a href="#fashion">Fashion</a>
-              <a href="#books">Books</a>
-              <a href="#home-appliances">Home Appliances</a>
-              <a href="#sports">Sports</a>
+              <Link to="#electronics">Electronics</Link>
+              <Link to="#fashion">Fashion</Link>
+              <Link to="#books">Books</Link>
+              <Link to="#home-appliances">Home Appliances</Link>
+              <Link to="#sports">Sports</Link>
             </div>
           )}
         </div>
         <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#fashion">Fashion</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><Link to="/">Home</Link></li> 
+          <li><Link to="/fashion">Fashion</Link></li>
+          <li><Link to="/about">About</Link></li> 
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
         <div className="contact-info">
           <PhoneIcon className="phone-icon" />

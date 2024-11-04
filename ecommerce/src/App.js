@@ -2,11 +2,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 import Header from './components/header/header';
-import Slider from './components/slider/slider';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import Home from './pages/home/home';
+import About from './pages/about/about';
 function App() {
   return (
     <>
+    <BrowserRouter>
     <Header/>
+    <Routes>
+      <Route exact={true} path="/" element={<Home/>}/>
+      <Route exact={true} path="/about" element={<About/>}/>
+    </Routes>
+    </BrowserRouter>
    
     </>
   );

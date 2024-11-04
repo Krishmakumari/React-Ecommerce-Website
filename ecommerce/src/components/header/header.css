@@ -4,7 +4,6 @@ header {
     height: 80px;
     margin: auto;
     padding: 15px 0;
-    background-color: #f8f8f8; /* Background color for header */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
@@ -21,21 +20,21 @@ header {
 header .headerSearch {
     display: flex; 
     align-items: center;
-    flex-grow: 1; /* Allow header search to grow and fill available space */
+    flex-grow: 1; 
     height: 55px;
 }
 
 header .headerSearch .search-container {
-    display: flex; /* Use flexbox for combined categories and search */
-    align-items: center; /* Center items vertically */
-    flex-grow: 1; /* Allow it to fill available space */
-    margin-right: 10px; /* Space between search and location input */
+    display: flex; 
+    align-items: center; 
+    flex-grow: 1; 
+    margin-right: 10px; 
 }
 
 header .headerSearch .selectdrop-container {
-    width: 180px; /* Adjust width as needed */
+    width: 180px;
     height: 50px;
-    border-radius: 12px 0 0 12px; /* Rounded corners only on the left */
+    border-radius: 12px 0 0 12px; 
     display: flex;
     align-items: center;
     justify-content: center; /* Center the text */

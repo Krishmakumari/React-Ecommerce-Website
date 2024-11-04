@@ -62,6 +62,8 @@
     justify-content: center; 
     flex-grow: 1; 
     position: relative; 
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .nav-links li {
@@ -102,6 +104,7 @@
     display: flex; 
     align-items: center; 
     margin-left: auto; 
+    margin-right: 15px;
 }
 
 .phone-icon {

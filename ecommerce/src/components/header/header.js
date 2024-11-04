@@ -108,7 +108,6 @@ function Header() {
         </div>
       </header>
       <Nav/>
-      <Slider />
     </>
   );
 }
