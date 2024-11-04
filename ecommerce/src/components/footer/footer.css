@@ -45,7 +45,8 @@
     display: flex;
     flex-direction: column;
 }
-.footer-form p{
+
+.footer-form p {
     font-size: 18px;
     font-weight: bold;
     color: #3b3a3a;
@@ -79,9 +80,6 @@
 .footer-form button:hover {
     background-color: #428c77;
 }
-
-
-
 
 .container-fluid {
     padding: 20px;
@@ -125,30 +123,25 @@
     color: rgb(68, 65, 65);
 }
 
-
-
-
-
-
 .last {
-    display: flex; /* Use flexbox for the columns */
-    justify-content: space-between; /* Distribute columns evenly */
-    padding: 20px; /* Add padding around the container */
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px; 
 }
 
 .col {
-    flex: 1; /* Allow columns to grow equally */
-    margin: 0 10px; /* Add space between columns */
-    text-align: left; /* Align text to the left */
+    flex: 1; 
+    margin: 0 10px; 
+    text-align: left; 
 }
 
 .logo {
-    margin-bottom: 20px; /* Space between image and address */
+    margin-bottom: 20px; 
 }
 
 .logo img {
-    width: 100px; /* Set a fixed width for the image */
-    height: auto; /* Maintain aspect ratio */
+    width: 100px; 
+    height: auto; 
     border-radius: 5px; 
 }
 
@@ -173,7 +166,8 @@
     color: #00bcd4; 
     font-size: 30px; 
 }
-.list h6{
+
+.list h6 {
     font-weight: bold;
 }
 
@@ -194,34 +188,33 @@ li:hover {
     transition: color 0.3s ease; 
 }
 
-
 .connect {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center items horizontally */
-    padding: 10px; /* Add some padding */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 10px; 
 }
 
 .line {
-    height: 2px; /* Thickness of the line */
-    background-color: #87e7d2; /* Aqua color */
-    width: 100%; /* Make the line full width */
-    margin: 0; /* No margins around the line */
+    height: 2px; 
+    background-color: #87e7d2; 
+    width: 100%; 
+    margin: 0; 
 }
 
 .footer-content {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between copyright and social icons */
-    width: 100%; /* Full width */
-    padding: 10px 20px; /* Add padding for spacing */
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    padding: 10px 20px; 
 }
 
 .copyright {
-    flex: 0 0 auto; /* Prevent shrinking or growing */
-    color: rgb(65, 60, 54); /* Set the color of the copyright text */
+    flex: 0 0 auto; 
+    color: rgb(65, 60, 54); 
 }
 
 .social {
-    display: flex; /* Display icons in a row */
-    gap: 15px; /* Space between icons */
+    display: flex; 
+    gap: 15px; 
 }
