@@ -1,0 +1,84 @@
+.productBox {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.productBox:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.imgWrapper {
+    position: relative;
+    overflow: hidden; 
+    border-radius: 8px;
+}
+
+.imgWrapper img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.imgWrapper:hover img {
+    transform: scale(1.1); 
+    filter: brightness(0.8); 
+}
+
+.iconBox {
+    width: 70px;
+    display: none;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: white; 
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.imgWrapper:hover .iconBox {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.iconBox .material-icons {
+    cursor: pointer;
+    font-size: 24px;
+    color: #00d4c2;
+}
+
+.info {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.name {
+    font-size: 14px;
+    color: #555;
+}
+
+.title {
+    font-size: 18px;
+    margin: 8px 0;
+    color: #333;
+}
+
+.price {
+    font-size: 16px; 
+    color: #00bcd4;  
+    font-weight: bold; 
+    margin-top: 8px;  
+}
