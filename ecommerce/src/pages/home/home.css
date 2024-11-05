@@ -1,0 +1,43 @@
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+  
+.features {
+   margin-bottom: 20px; /* Space between "Featured Categories" and the row of images */
+}
+  
+  .images {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    
+  }
+  
+  .image-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    object-fit: cover;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(47, 46, 46, 0.3);
+  }
+  
+  .image-container h5 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
