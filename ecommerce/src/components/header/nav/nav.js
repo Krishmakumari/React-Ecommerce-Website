@@ -3,6 +3,7 @@ import './nav.css';
 import GridViewIcon from '@mui/icons-material/GridView';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { Link } from 'react-router-dom';
+import DownArrow from '@mui/icons-material/KeyboardArrowDown';
 
 const Nav = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -34,11 +35,19 @@ const Nav = () => {
           )}
         </div>
         <ul className="nav-links">
-          <li><Link to="/">Home</Link></li> 
-          <li><Link to="/fashion">Fashion</Link></li>
-          <li><Link to="/about">About</Link></li> 
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
+  <li><Link to="/">Home</Link></li> 
+  <li className="dropdown-fashion">
+    <Link to="/fashion">Fashion</Link>
+    <DownArrow/>
+    <ul className="dropdown-menu">
+      <li><Link to="/men">Men</Link></li>
+      <li><Link to="/women">Women</Link></li>
+    </ul>
+  </li>
+  <li><Link to="/about">About</Link></li> 
+  <li><Link to="/contact">Contact</Link></li>
+</ul>
+
         <div className="contact-info">
           <PhoneIcon className="phone-icon" />
           <div>
@@ -52,3 +61,6 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
+

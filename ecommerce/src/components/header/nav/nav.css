@@ -1,11 +1,14 @@
+/* Navbar Styles */
 .navbar {
     background-color: #fff; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     padding: 10px 20px;
     display: flex; 
     align-items: center;
+    position: relative; /* Ensure navbar is the reference for absolute positioning */
 }
 
+/* Navbar container (flex to distribute space between items) */
 .navbar-container {
     display: flex; 
     width: 100%; 
@@ -13,16 +16,48 @@
     align-items: center; 
 }
 
-.dropdown {
-    position: relative; 
-    margin-right: 20px; 
+/* Dropdown Styles */
+.dropdown-fashion {
+    position: relative;
 }
 
-.grid-icon {
-    margin-right: 5px; 
-    vertical-align: middle; 
+/* Ensure the dropdown has a higher z-index than the slider */
+.dropdown-fashion .dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Position below the "Fashion" link */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 120px; /* Minimum width for dropdown */
+    padding: 5px 0;
+    border-radius: 5px;
+    z-index: 9999; /* Ensure dropdown is on top */
 }
 
+/* Show dropdown on hover */
+.dropdown-fashion:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* Styling for dropdown links */
+.dropdown-menu li {
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+    color: #3bb77e;
+}
+
+/* Button styles for dropdown trigger */
 .dropbtn {
     background-color: #3bb77e; 
     color: white; 
@@ -34,26 +69,7 @@
     display: flex;
 }
 
-.dropdown-content {
-    display: block; 
-    position: absolute; 
-    background-color: white; 
-    min-width: 160px; 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-    z-index: 1; 
-}
-
-.dropdown-content a {
-    color: black; 
-    padding: 12px 16px; 
-    text-decoration: none; 
-    display: block; 
-}
-
-.dropdown-content a:hover {
-    background-color: #f0f0f0; 
-}
-
+/* Navbar links style */
 .nav-links {
     list-style-type: none; 
     margin: 0; 
@@ -66,10 +82,12 @@
     font-weight: 500;
 }
 
+/* Individual navbar item */
 .nav-links li {
     margin: 0 15px; 
 }
 
+/* Navbar link styling */
 .nav-links a {
     text-decoration: none; 
     color: black; 
@@ -78,15 +96,18 @@
     transition: color 0.3s ease; 
 }
 
+/* Active link styling */
 .nav-links a:active {
     color: #3bb77e; 
     transform: translateY(2px); 
 }
 
+/* Hover effect for links */
 .nav-links a:hover {
     color: #3bb77e; 
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .navbar-container {
         flex-direction: column; 
@@ -100,6 +121,7 @@
     }
 }
 
+/* Contact info in navbar */
 .contact-info {
     display: flex; 
     align-items: center; 

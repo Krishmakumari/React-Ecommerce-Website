@@ -16,7 +16,6 @@ function Home() {
           <h2>Featured Categories</h2>
         </div>
         <div className="images">
-          {/* Adding five circles with "Fashion" text below each */}
           <div className="image-container">
             <img src={Fashion} alt="Fashion" />
             <h5>Fashion</h5>

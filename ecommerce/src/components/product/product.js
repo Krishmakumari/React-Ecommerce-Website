@@ -1,22 +1,24 @@
-// Product.js
 import React from 'react';
+import { useCart } from '../../pages/cart/cartcontext'; // Import the custom hook
 import Rating from '@mui/material/Rating';
 import './product.css';
 import FavoriteIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import VisibilityIcon from '@mui/icons-material/VisibilityOutlined';
 
-function Product({ name, title, image, rating, price }) {
+function Product({ name, title, image, rating, price, id }) {
+  const { addToCart, addToFavorites } = useCart(); // Access cart functions from context
+
   return (
     <div className='productBox'>
       <div className='imgWrapper'>
         <img src={image} alt="Product" />
         <div className='iconBox'>
           <span className='material-icons'>
-            <FavoriteIcon/>
-            </span>
+            <FavoriteIcon onClick={() => addToCart({ name, title, image, rating, price, id })} />
+          </span>
           <span className='material-icons'>
-            <VisibilityIcon/>
-            </span> {/* Eye icon */}
+            <VisibilityIcon />
+          </span> {/* Eye icon */}
         </div>
       </div>
       <div className='info'>

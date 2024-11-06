@@ -7,14 +7,18 @@ import Wishlist from '@mui/icons-material/FavoriteBorder';
 import Cart from '@mui/icons-material/ShoppingCartOutlined';
 import DownArrow from '@mui/icons-material/KeyboardArrowDown';
 import LocationIcon from '@mui/icons-material/LocationOn';
-import Slider from '../slider/slider';
 import Nav from './nav/nav';
+import { Link } from 'react-router-dom';
+import { useCart } from '../../pages/cart/cartcontext'; // Ensure the correct import path
 
 function Header() {
   const [isCategoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
   const [isLocationDropdownOpen, setLocationDropdownOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All Categories');
   const [selectedLocation, setSelectedLocation] = useState('Locations');
+
+  // Use cart state and functions from CartContext, with fallback for cartItems
+  const { cartItems = [], addToCart } = useCart(); // Default to empty array if cartItems is undefined
 
   const toggleCategoryDropdown = () => {
     setCategoryDropdownOpen(!isCategoryDropdownOpen);
@@ -47,7 +51,6 @@ function Header() {
             </div>
             <div className='col-sm-9'>
               <div className='headerSearch'>
-                {/* Combined Categories Dropdown and Search Input */}
                 <div className='search-container'>
                   {/* Categories Dropdown */}
                   <div className='selectdrop-container' onClick={toggleCategoryDropdown}>
@@ -91,10 +94,17 @@ function Header() {
                     <Wishlist />
                     Wishlist
                   </div>
-                  
+
+                  {/* Cart Icon with Dynamic Count */}
                   <div className='cart'>
-                    <Cart />
-                    Cart
+                    <Link to="/cart" style={{ textDecoration: 'none', color: 'black' }}>
+                      {/* Cart count will be displayed next to the cart icon */}
+                      <div className='cart-icon'>
+                        <Cart />
+                        <span className='cart-count'>{cartItems.length || 0}</span>
+                      </div>
+                      Cart
+                    </Link>
                   </div>
 
                   {/* Sign In Button */}
@@ -107,7 +117,7 @@ function Header() {
           </div>
         </div>
       </header>
-      <Nav/>
+      <Nav />
     </>
   );
 }

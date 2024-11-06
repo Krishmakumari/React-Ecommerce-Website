@@ -16,7 +16,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-
 function Footer() {
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -31,205 +30,192 @@ function Footer() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json"
+        Accept: "application/json",
       },
-      body: json
+      body: json,
     }).then((res) => res.json());
 
     if (res.success) {
       console.log("Success", res);
+      alert("Your feedback has been submitted successfully!");
+    } else {
+      console.error("Error", res);
+      alert("There was an error. Please try again.");
     }
   };
 
   return (
     <>
-    <div className='footer-container'>
-      <div className='img'>
-        <img src={Img} alt="News" />
+      <div className="footer-container">
+        <div className="img">
+          <img src={Img} alt="News" />
+        </div>
+        <div className="text">
+          <h2>
+            Stay home & get your daily
+            <br />
+            needs from our shop
+          </h2>
+          <p>Start Your Daily Shopping with Nest Mart</p>
+        </div>
+        <form className="footer-form" onSubmit={onSubmit}>
+          <p>Give your valuable Feedback :)</p>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Submit Form</button>
+        </form>
       </div>
-      <div className='text'>
-        <h2>Stay home & get your daily<br/> 
-        needs from our shop</h2>
-        <p>Start Your Daily Shopping with Nest Mart</p>
+
+      <div className="container-fluid">
+        <div className="smallboxes">
+          <div className="box">
+            <span className="icon">
+              <HandshakeIcon />
+            </span>
+            <div className="boxtext">
+              <h6>Free delivery</h6>
+              <p>Order $50 or more</p>
+            </div>
+          </div>
+          <div className="box">
+            <span className="icon">
+              <ShippingIcon />
+            </span>
+            <div className="boxtext">
+              <h6>Fast Shipping</h6>
+              <p>Delivery within 2-3 days</p>
+            </div>
+          </div>
+          <div className="box">
+            <span className="icon">
+              <SupportIcon />
+            </span>
+            <div className="boxtext">
+              <h6>24/7 Support</h6>
+              <p>We're here to help</p>
+            </div>
+          </div>
+          <div className="box">
+            <span className="icon">
+              <ReturnIcon />
+            </span>
+            <div className="boxtext">
+              <h6>Easy Returns</h6>
+              <p>30-day return policy</p>
+            </div>
+          </div>
+          <div className="box">
+            <span className="icon">
+              <CurrencyIcon />
+            </span>
+            <div className="boxtext">
+              <h6>Secure Payment</h6>
+              <p>Safe and reliable</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <form className='footer-form' onSubmit={onSubmit}>
-        <p>Give your valuable Feedback :)</p>
-        <input type="text" name="name" placeholder="Your Name"/>
-        <textarea name="message" placeholder="Your Message"></textarea>
-        <button type="submit">Submit Form</button>
-      </form>
-    </div>
 
-
-    <div className='container-fluid'>
-    <div className='smallboxes'>
-        <div className='box'>
-            <span className='icon'>
-                <HandshakeIcon />
-            </span>
-            <div className='boxtext'>
-                <h6>Free delivery</h6>
-                <p>Order $50 or more</p>
+      <div className="last">
+        <div className="col">
+          <div className="logo">
+            <img src={Img2} alt="Logo" />
+          </div>
+          <div className="address-list">
+            <div className="address">
+              <span className="addressicon">
+                <LocationIcon />
+              </span>
+              <p>Address: Lovely Professional University, Phagwara</p>
             </div>
+            <div className="phone">
+              <span className="addressicon">
+                <PhoneIcon />
+              </span>
+              <p>Phone: +91 12345 67890</p>
+            </div>
+            <div className="phone">
+              <span className="addressicon">
+                <EmailIcon />
+              </span>
+              <p>shop@.com</p>
+            </div>
+            <div className="phone">
+              <span className="addressicon">
+                <ClockIcon />
+              </span>
+              <p>06:00-22:00 Mon-Fri</p>
+            </div>
+          </div>
         </div>
-        <div className='box'>
-            <span className='icon'>
-                <ShippingIcon />
-            </span>
-            <div className='boxtext'>
-                <h6>Fast Shipping</h6>
-                <p>Delivery within 2-3 days</p>
-            </div>
-        </div>
-        <div className='box'>
-            <span className='icon'>
-                <SupportIcon />
-            </span>
-            <div className='boxtext'>
-                <h6>24/7 Support</h6>
-                <p>We're here to help</p>
-            </div>
-        </div>
-        <div className='box'>
-            <span className='icon'>
-                <ReturnIcon />
-            </span>
-            <div className='boxtext'>
-                <h6>Easy Returns</h6>
-                <p>30-day return policy</p>
-            </div>
-        </div>
-        <div className='box'>
-            <span className='icon'>
-                <CurrencyIcon />
-            </span>
-            <div className='boxtext'>
-                <h6>Secure Payment</h6>
-                <p>Safe and reliable</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div className='last'>
-    <div className='col'>
-        <div className='logo'>
-            <img src={Img2} alt="Location" />
-        </div>
-        <div className='address-list'>
-            <div className='address'>
-                <span className='addressicon'>
-                    <LocationIcon />
-                </span>
-                <p>Address: Lovely Professional University, Phagwara</p>
-            </div>
-            <div className='phone'>
-                <span className='addressicon'>
-                    <PhoneIcon />
-                </span>
-                <p>Phone: +91 12345 67890</p>
-            </div>
-            <div className='phone'>
-                <span className='addressicon'>
-                    <EmailIcon />
-                </span>
-                <p>shop@.com</p>
-            </div>
-            <div className='phone'>
-                <span className='addressicon'>
-                    <ClockIcon />
-                </span>
-                <p>06:00-22:00 Mon-Fri</p>
-            </div>
-            
-        </div>
-    </div>
-    <div className='col'>
-        <div className='list'>
+        <div className="col">
+          <div className="list">
             <h6>Company</h6>
             <ul>
-                <li>About Us</li>
-                <li>Delivery Information</li>
-                <li>Privacy Policy</li>
-                <li>Terms & Conditions</li>
-                <li>Contact Us</li>
-                <li>Support Center</li>
-                <li>Careers</li>
+              <li>About Us</li>
+              <li>Delivery Information</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+              <li>Contact Us</li>
+              <li>Support Center</li>
+              <li>Careers</li>
             </ul>
+          </div>
         </div>
-    </div>
-    <div className='col'>
-        <div className='list'>
+        <div className="col">
+          <div className="list">
             <h6>Corporate</h6>
             <ul>
-                <li>About Us</li>
-                <li>Delivery Information</li>
-                <li>Privacy Policy</li>
-                <li>Terms & Conditions</li>
-                <li>Contact Us</li>
-                <li>Support Center</li>
-                <li>Careers</li>
+              <li>About Us</li>
+              <li>Delivery Information</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+              <li>Contact Us</li>
+              <li>Support Center</li>
+              <li>Careers</li>
             </ul>
+          </div>
         </div>
-    </div>
-    <div className='col'>
-        <div className='list'>
-            <h6>Company</h6>
-            <ul>
-                <li>About Us</li>
-                <li>Delivery Information</li>
-                <li>Privacy Policy</li>
-                <li>Terms & Conditions</li>
-                <li>Contact Us</li>
-                <li>Support Center</li>
-                <li>Careers</li>
-            </ul>
-        </div>
-    </div>
-    <div className='col'>
-        <div className='list'>
+        <div className="col">
+          <div className="list">
             <h6>Popular</h6>
             <ul>
-                <li>About Us</li>
-                <li>Delivery Information</li>
-                <li>Privacy Policy</li>
-                <li>Terms & Conditions</li>
-                <li>Contact Us</li>
-                <li>Support Center</li>
-                <li>Careers</li>
+              <li>About Us</li>
+              <li>Delivery Information</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+              <li>Contact Us</li>
+              <li>Support Center</li>
+              <li>Careers</li>
             </ul>
+          </div>
         </div>
-    </div>
-</div>
-<div className='connect'>
-    <div className='line'></div>
-    
-    <div className='footer-content'>
-        <div className='copyright'>
+      </div>
+
+      <div className="connect">
+        <div className="line"></div>
+
+        <div className="footer-content">
+          <div className="copyright">
             <p>2024, Copyright</p>
-        </div>
-        
-        <div className='social'>
+          </div>
+
+          <div className="social">
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                <InstagramIcon />
+              <InstagramIcon />
             </a>
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                <FacebookIcon />
+              <FacebookIcon />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <TwitterIcon />
+              <TwitterIcon />
             </a>
             <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                <YouTubeIcon />
+              <YouTubeIcon />
             </a>
+          </div>
         </div>
-    </div>
-</div>
-
-
-
-
+      </div>
     </>
   );
 }
