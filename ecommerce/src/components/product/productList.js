@@ -10,6 +10,8 @@ import P7 from '../../assets/p7.jpg';
 import P8 from '../../assets/p8.jpg';
 import P9 from '../../assets/p9.jpg';
 import P10 from '../../assets/p10.jpg';
+
+
 import './productList.css';
 import { useCart } from '../../pages/cart/cartcontext'; // Import the custom hook
 
@@ -25,7 +27,7 @@ function ProductList() {
     { id: 7, name: 'Ella Blue', title: 'Product 7', image: P7, rating: 4.0, price: 849 },
     { id: 8, name: 'Frank Green', title: 'Product 8', image: P8, rating: 3.5, price: 950 },
     { id: 9, name: 'Grace Yellow', title: 'Product 9', image: P9, rating: 4.0, price: 1100 },
-    { id: 10, name: 'Hank Pink', title: 'Product 10', image: P10, rating: 5.0, price: 1500 },
+    { id: 9, name: 'Grace Yellow', title: 'Product 9', image: P10, rating: 4.3, price: 600 },
   ];
 
   const { addToCart } = useCart(); // Access addToCart function from context

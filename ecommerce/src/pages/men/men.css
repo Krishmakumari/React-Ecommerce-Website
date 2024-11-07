@@ -1,0 +1,50 @@
+.headingfashion {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.headingfashion h2 {
+    text-align: left;
+    margin-bottom: 5px;
+    padding: 35px;
+    background-color: rgb(156, 247, 217);
+    border-radius: 25px;
+}
+
+.fashion-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 150px;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    box-shadow: 2px 2px 1px rgb(192, 192, 192);
+    flex: 1;
+}
+
+.banner img {
+    width: 250px;
+    height: 550px;
+    object-fit: cover;
+    box-shadow: 2px 2px 3px rgb(134, 131, 131);
+}
+
+.productListlast {
+    flex: 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    height: 400px;
+}
+
+.fashionlast{
+    margin-top: 350px;
+}
