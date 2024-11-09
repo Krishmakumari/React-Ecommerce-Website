@@ -1,0 +1,147 @@
+/* General styling for the product detail page */
+.productDetailContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productDetailContainer:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling for the product image */
+.productImage {
+    max-width: 100%;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the product info section */
+.productInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    max-width: 500px;
+}
+
+/* Title styling */
+.productInfo h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Name styling */
+.productInfo p {
+    font-size: 20px;
+    color: #7f8c8d;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Rating styling */
+.MuiRating-root {
+    color: #f39c12;
+}
+
+/* Price styling */
+.productInfo h3 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2980b9;
+}
+
+/* Product Description */
+.productDescription {
+    font-size: 16px;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.productInfo button {
+    padding: 14px 24px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+    margin-top: 20px;
+}
+
+.productInfo button:hover {
+    background-color: #2980b9;
+    border-radius: 12px;
+}
+
+.productInfo button:focus {
+    outline: none;
+}
+
+/* Added to Cart message */
+.addedToCartMessage {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #23e7dd;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+.addedToCartMessage p{
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .productDetailContainer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .productDetailContainer img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .productInfo {
+        max-width: 100%;
+    }
+
+    .productInfo h2 {
+        font-size: 28px;
+    }
+
+    .productInfo h3 {
+        font-size: 22px;
+    }
+
+    .productInfo button {
+        width: 100%;
+        color: white;
+    }
+    .productInfo Link{
+        color: white;
+    }
+}
+.viewCartLink {
+    color: white; /* Set the link text color to white */
+    text-decoration: none; /* Remove the underline */
+  }

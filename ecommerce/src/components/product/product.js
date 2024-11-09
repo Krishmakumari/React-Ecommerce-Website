@@ -4,9 +4,15 @@ import Rating from '@mui/material/Rating';
 import './product.css';
 import FavoriteIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import VisibilityIcon from '@mui/icons-material/VisibilityOutlined';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 function Product({ name, title, image, rating, price, id }) {
   const { addToCart, addToFavorites } = useCart(); // Access cart functions from context
+  const navigate = useNavigate(); // Initialize the navigate function
+
+  const handleViewClick = () => {
+    navigate(`/product/${id}`); // Navigate to product detail page with the product id
+  };
 
   return (
     <div className='productBox'>
@@ -17,8 +23,8 @@ function Product({ name, title, image, rating, price, id }) {
             <FavoriteIcon onClick={() => addToCart({ name, title, image, rating, price, id })} />
           </span>
           <span className='material-icons'>
-            <VisibilityIcon />
-          </span> {/* Eye icon */}
+            <VisibilityIcon onClick={handleViewClick} /> {/* View icon with click handler */}
+          </span>
         </div>
       </div>
       <div className='info'>
