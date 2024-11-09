@@ -10,6 +10,8 @@ import Cart from './pages/cart/cart';
 import { CartProvider } from './pages/cart/cartcontext';  // Import your CartProvider
 import Checkout from './pages/checkout/checkout';
 import Contact from './pages/contact/contact';
+import Electronic from './pages/electronics/electronic';
+import Jewelery from './pages/jewelery.js/jewelery';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/checkout' element={<Checkout />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/electronic' element={<Electronic />} />
+          <Route path='/jewelery' element={<Jewelery />} />
         </Routes>
       </Router>
     </CartProvider>

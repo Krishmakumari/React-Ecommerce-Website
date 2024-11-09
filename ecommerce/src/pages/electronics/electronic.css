@@ -1,0 +1,71 @@
+/* Container for Electronics Page */
+.electronics-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    gap: 20px; /* Space between banner and product list */
+}
+
+/* Heading Styling */
+.headingelectronics {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.headingelectronics h2 {
+    text-align: left;
+    margin-bottom: 5px;
+    padding: 35px;
+    background-color: rgb(156, 247, 217);
+    border-radius: 25px;
+}
+
+/* Product Grid Section */
+.eproduct {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Product Card Styling */
+.eproduct .product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.eproduct .product:hover {
+    transform: translateY(-10px);
+}
+
+.eproduct .product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.eproduct .product h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.eproduct .product p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.eproduct .product .rating {
+    color: #f1c40f;
+}
+
+.eproduct .product .price {
+    font-size: 1.3em;
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
