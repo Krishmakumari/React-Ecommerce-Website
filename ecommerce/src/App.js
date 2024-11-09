@@ -9,6 +9,7 @@ import Women from './pages/women/women';
 import Cart from './pages/cart/cart';
 import { CartProvider } from './pages/cart/cartcontext';  // Import your CartProvider
 import Checkout from './pages/checkout/checkout';
+import Contact from './pages/contact/contact';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/women" element={<Women />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/checkout' element={<Checkout />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
       </Router>
     </CartProvider>
