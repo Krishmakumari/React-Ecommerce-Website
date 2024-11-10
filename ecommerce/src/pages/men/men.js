@@ -15,6 +15,7 @@ import P14 from '../../assets/p14.jpg';
 import P15 from '../../assets/p15.jpg';
 import P16 from '../../assets/p16.jpg';
 import P17 from '../../assets/p17.jpg';
+
 import Footer from '../../components/footer/footer';
 
 // Array of men's products

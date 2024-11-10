@@ -1,7 +1,8 @@
+// App.js
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Header from './components/header/header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/header/header';
 import Home from './pages/home/home';
 import About from './pages/about/about';
 import Men from './pages/men/men';
@@ -11,12 +12,12 @@ import { CartProvider } from './pages/cart/cartcontext';  // Import your CartPro
 import Checkout from './pages/checkout/checkout';
 import Contact from './pages/contact/contact';
 import Electronic from './pages/electronics/electronic';
-import Jewelery from './pages/jewelery.js/jewelery';
-import Productdetail from './pages/productdetail/productdetail'; // Import the Productdetail page
+import Jewelery from './pages/jewelery/jewelery';
+import ProductDetail from './pages/productdetail/productdetail'; // Import the ProductDetail page
 
 function App() {
   return (
-    <CartProvider>  {/* Wrap your components inside CartProvider to access cart and favorites context */}
+    <CartProvider>  {/* Wrap components inside CartProvider to access cart context */}
       <Router>
         <Header />
         <Routes>
@@ -29,7 +30,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/electronic" element={<Electronic />} />
           <Route path="/jewelery" element={<Jewelery />} />
-          <Route path="/product/:id" element={<Productdetail />} /> {/* Add route for product details page */}
+          <Route path="/product/:id" element={<ProductDetail />} /> {/* Dynamic route for product details */}
         </Routes>
       </Router>
     </CartProvider>

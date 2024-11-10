@@ -17,25 +17,25 @@ import Footer from '../../components/footer/footer'; // Footer component if need
 
 // Array of jewelry products
 const jewelryProducts = [
-  { id: 1, name: 'Tanishq', title: 'Gold Necklace', image: J1, rating: 4.8, price: 25000 },
-  { id: 2, name: 'Kalyan', title: 'Diamond Ring', image: J2, rating: 4.6, price: 35000 },
-  { id: 3, name: 'CaratLane', title: 'Platinum Earrings', image: J3, rating: 4.7, price: 45000 },
-  { id: 4, name: 'PC Jeweller', title: 'Silver Bracelet', image: J4, rating: 4.5, price: 15000 },
-  { id: 5, name: 'Malabar', title: 'Gold Bangles', image: J5, rating: 4.3, price: 20000 },
-  { id: 6, name: 'Zirconia', title: 'Zircon Necklace', image: J6, rating: 4.4, price: 18000 },
-  { id: 7, name: 'Bluestone', title: 'Silver Anklet', image: J7, rating: 4.2, price: 12000 },
-  { id: 8, name: 'Swarovski', title: 'Crystal Earrings', image: J8, rating: 4.7, price: 22000 },
-  { id: 9, name: 'Swarovski', title: 'Crystal Earrings', image: J9, rating: 4.7, price: 22000 },
-  { id: 10, name: 'Swarovski', title: 'Crystal Earrings', image: J10, rating: 4.7, price: 22000 },
-  { id: 11, name: 'Swarovski', title: 'Crystal Earrings', image: J11, rating: 4.7, price: 22000 },
-  { id: 12, name: 'Swarovski', title: 'Crystal Earrings', image: J12, rating: 4.7, price: 22000 },
+  { id: 25, name: 'Tanishq', title: 'Gold Necklace', image: J1, rating: 4.8, price: 25000 },
+  { id: 26, name: 'Kalyan', title: 'Diamond Ring', image: J2, rating: 4.6, price: 35000 },
+  { id: 27, name: 'CaratLane', title: 'Platinum Earrings', image: J3, rating: 4.7, price: 45000 },
+  { id: 28, name: 'PC Jeweller', title: 'Silver Bracelet', image: J4, rating: 4.5, price: 15000 },
+  { id: 29, name: 'Malabar', title: 'Gold Bangles', image: J5, rating: 4.3, price: 20000 },
+  { id: 30, name: 'Zirconia', title: 'Zircon Necklace', image: J6, rating: 4.4, price: 18000 },
+  { id: 31, name: 'Bluestone', title: 'Silver Anklet', image: J7, rating: 4.2, price: 12000 },
+  { id: 32, name: 'Swarovski', title: 'Crystal Earrings', image: J8, rating: 4.7, price: 22000 },
+  { id: 33, name: 'Swarovski', title: 'Crystal Earrings', image: J9, rating: 4.7, price: 22000 },
+  { id: 34, name: 'Swarovski', title: 'Crystal Earrings', image: J10, rating: 4.7, price: 22000 },
+  { id: 35, name: 'Swarovski', title: 'Crystal Earrings', image: J11, rating: 4.7, price: 22000 },
+  { id: 36, name: 'Swarovski', title: 'Crystal Earrings', image: J12, rating: 4.7, price: 22000 },
 ];
 
 function Jewelery() {
   return (
     <>
       <div className="headingelectronics">
-        <h2>Jewelry</h2>
+        <h2>Jewellry</h2>
       </div>
       <div className="electronics-container">
         <div className="eproduct">

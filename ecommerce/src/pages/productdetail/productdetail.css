@@ -68,7 +68,7 @@
 /* Product Description */
 .productDescription {
     font-size: 16px;
-    color: white;
+    color: #7f8c8d;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -95,18 +95,27 @@
     outline: none;
 }
 
+/* Styling for the 'View Cart' button link text */
+.productInfo button a {
+    color: white; /* Set the text color to white */
+    text-decoration: none; /* Remove underline */
+}
+
+.productInfo button a:hover {
+    color: white; /* Ensure the text stays white on hover */
+}
+
 /* Added to Cart message */
 .addedToCartMessage {
     margin-top: 15px;
     font-size: 18px;
+    color: #27ae60;
     font-weight: bold;
-    background-color: #23e7dd;
+    background-color: #d4f7d4;
     padding: 10px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-.addedToCartMessage p{
-    color: white;
 }
 
 /* Responsive Design */
@@ -133,15 +142,8 @@
         font-size: 22px;
     }
 
-    .productInfo button {
+    .productInfo button a {
         width: 100%;
         color: white;
     }
-    .productInfo Link{
-        color: white;
-    }
 }
-.viewCartLink {
-    color: white; /* Set the link text color to white */
-    text-decoration: none; /* Remove the underline */
-  }
