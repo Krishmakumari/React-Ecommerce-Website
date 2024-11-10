@@ -101,7 +101,7 @@ function Header() {
                       {/* Cart count will be displayed next to the cart icon */}
                       <div className='cart-icon'>
                         <Cart />
-                        <span className='cart-count'>{cartItems.length || 0}</span>
+                        <span className='cart-count'>{cartItems.length}</span>
                       </div>
                       Cart
                     </Link>
