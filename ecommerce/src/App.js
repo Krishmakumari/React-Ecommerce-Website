@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header/header';
 import Home from './pages/home/home';
 import About from './pages/about/about';
+import Login from './pages/login/login';
 import Men from './pages/men/men';
 import Women from './pages/women/women';
 import Cart from './pages/cart/cart';
@@ -13,6 +14,7 @@ import Checkout from './pages/checkout/checkout';
 import Contact from './pages/contact/contact';
 import Electronic from './pages/electronics/electronic';
 import Jewelery from './pages/jewelery/jewelery';
+import Register from './pages/login/register';
 import ProductDetail from './pages/productdetail/productdetail'; // Import the ProductDetail page
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/men" element={<Men />} />
           <Route path="/women" element={<Women />} />
           <Route path="/cart" element={<Cart />} />
