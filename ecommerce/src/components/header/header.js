@@ -90,10 +90,10 @@ function Header() {
 
                 {/* Wishlist and Cart */}
                 <div className='header-actions'>
-                  <div className='wishlist'>
+                  {/* <div className='wishlist'>
                     <Wishlist />
                     Wishlist
-                  </div>
+                  </div> */}
 
                   {/* Cart Icon with Dynamic Count */}
                   <div className='cart'>
