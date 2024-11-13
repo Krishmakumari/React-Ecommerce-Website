@@ -24,7 +24,7 @@ const Nav = () => {
             <GridViewIcon className="grid-icon" />
             Browse Categories
           </button>
-          {isDropdownOpen && (
+          {/* {isDropdownOpen && (
             <div className="dropdown-content" onMouseLeave={closeDropdown}>
               <Link to="#electronics">Electronics</Link>
               <Link to="#fashion">Fashion</Link>
@@ -32,7 +32,7 @@ const Nav = () => {
               <Link to="#home-appliances">Home Appliances</Link>
               <Link to="#sports">Sports</Link>
             </div>
-          )}
+          )} */}
         </div>
         <ul className="nav-links">
   <li><Link to="/">Home</Link></li> 
@@ -44,6 +44,7 @@ const Nav = () => {
       <li><Link to="/women">Women</Link></li>
     </ul>
   </li>
+  <li><Link to="/footwear">Footwear</Link></li> 
   <li><Link to="/electronic">Electronic</Link></li> 
   <li><Link to="/jewelery">Jewellery</Link></li> 
   <li><Link to="/about">About</Link></li> 

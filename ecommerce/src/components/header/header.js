@@ -8,8 +8,8 @@ import Cart from '@mui/icons-material/ShoppingCartOutlined';
 import DownArrow from '@mui/icons-material/KeyboardArrowDown';
 import LocationIcon from '@mui/icons-material/LocationOn';
 import Nav from './nav/nav';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import { useCart } from '../../pages/cart/cartcontext'; // Ensure the correct import path
+import { Link } from 'react-router-dom'; 
+import { useCart } from '../../pages/cart/cartcontext'; 
 
 function Header() {
   const [isCategoryDropdownOpen, setCategoryDropdownOpen] = useState(false);

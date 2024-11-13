@@ -2,7 +2,7 @@
 header {
     width: 100%;
     height: 80px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .container-fluid .row {
@@ -39,7 +39,7 @@ header .headerSearch .selectdrop-container {
     cursor: pointer;
     background-color: white; 
     border: 1px solid #3bb77e; 
-    box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 1px  rgba(0, 0, 0, 0.2);
 }
 
 header .headerSearch .selectdrop-container .selectdrop {
@@ -57,7 +57,7 @@ header .headerSearch .search {
     border: 1px solid #3bb77e;
     border-radius: 0 12px 12px 0; 
     overflow: hidden;
-    box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 1px  rgba(0, 0, 0, 0.2);
 }
 
 header .headerSearch .search input {
@@ -87,7 +87,7 @@ header .location {
     margin-left: 10px; 
     padding: 0 10px; 
     background-color: white; 
-    box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 2px 1px  rgba(0, 0, 0, 0.2);
 }
 
 header .locationsearch {

@@ -16,6 +16,7 @@ import Electronic from './pages/electronics/electronic';
 import Jewelery from './pages/jewelery/jewelery';
 import Register from './pages/login/register';
 import ProductDetail from './pages/productdetail/productdetail'; // Import the ProductDetail page
+import Footwear from './pages/footwear/footwear';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/electronic" element={<Electronic />} />
+          <Route path="/footwear" element={<Footwear />} />
           <Route path="/jewelery" element={<Jewelery />} />
           <Route path="/product/:id" element={<ProductDetail />} /> {/* Dynamic route for product details */}
         </Routes>
