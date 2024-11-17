@@ -5,6 +5,7 @@ import About1 from '../../assets/about.jpeg';
 import About2 from '../../assets/about2.jpeg';
 import About3 from '../../assets/about3.jpeg';
 import About4 from '../../assets/about4.webp';
+import About5 from '../../assets/about5.jpg';
 
 function About() {
   return (
@@ -36,6 +37,10 @@ function About() {
             <div className="product-item">
               <img src={About2} alt="Men clothing" />
               <span>Men Clothing</span>
+            </div>
+            <div className="product-item">
+              <img src={About5} alt="Women clothing" />
+              <span>Footwear</span>
             </div>
             <div className="product-item">
               <img src={About3} alt="Electronics" />
