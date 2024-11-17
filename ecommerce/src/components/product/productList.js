@@ -27,7 +27,7 @@ function ProductList() {
     { id: 7, name: 'Ella Blue', title: 'Product 7', image: P7, rating: 4.0, price: 849 },
     { id: 8, name: 'Frank Green', title: 'Product 8', image: P8, rating: 3.5, price: 950 },
     { id: 9, name: 'Grace Yellow', title: 'Product 9', image: P9, rating: 4.0, price: 1100 },
-    { id: 9, name: 'Grace Yellow', title: 'Product 9', image: P10, rating: 4.3, price: 600 },
+    { id: 10, name: 'Grace Yellow', title: 'Product 9', image: P10, rating: 4.3, price: 600 },
   ];
 
   const { addToCart } = useCart(); // Access addToCart function from context

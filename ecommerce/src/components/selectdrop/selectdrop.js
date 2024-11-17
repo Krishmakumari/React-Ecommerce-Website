@@ -1,13 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './selectdrop.css';
 
 const Selectdrop = ({ isOpen, onSelect, type }) => {
+  const navigate = useNavigate();
+
   if (!isOpen) return null;
 
-  // Define separate options for categories and locations
   const categoryOptions = [
-    "All Categories", "Electronics", "Fashion", "Books", 
-    "Home Appliances", "Sports"
+    { name: "All Categories", path: "/" },
+    { name: "Men Clothing", path: "/men" },
+    { name: "Women Clothing", path: "/women" },
+    { name: "Electronics", path: "/electronic" },
+    { name: "Footwear", path: "/footwear" },
+    { name: "Jewelery", path: "/jewelery" },
   ];
 
   const locationOptions = [
@@ -20,18 +26,21 @@ const Selectdrop = ({ isOpen, onSelect, type }) => {
     "West Bengal"
   ];
 
-  // Choose the appropriate options based on the type
+
   const options = type === "categories" ? categoryOptions : locationOptions;
 
   return (
     <div className="selectdrop-menu">
       {options.map((option) => (
         <div
-          key={option}
+          key={option.name}
           className="selectdrop-item"
-          onClick={() => onSelect(option)}
+          onClick={() => {
+            onSelect(option.name);
+            navigate(option.path);
+          }}
         >
-          {option}
+          {option.name}
         </div>
       ))}
     </div>

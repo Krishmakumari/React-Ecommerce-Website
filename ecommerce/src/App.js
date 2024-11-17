@@ -17,10 +17,12 @@ import Jewelery from './pages/jewelery/jewelery';
 import Register from './pages/login/register';
 import ProductDetail from './pages/productdetail/productdetail'; // Import the ProductDetail page
 import Footwear from './pages/footwear/footwear';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <CartProvider>  {/* Wrap components inside CartProvider to access cart context */}
+       <ToastContainer />
       <Router>
         <Header />
         <Routes>

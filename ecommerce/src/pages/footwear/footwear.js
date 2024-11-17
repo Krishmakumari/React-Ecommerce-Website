@@ -19,17 +19,17 @@ import Footer from '../../components/footer/footer'; // Uncomment if Footer is n
 // Extended array of footwear products
 const footwearProducts = [
   { id: 45, name: 'Nike', title: 'Running Shoes', image: f1, rating: 4.8, price: 5000 },
-  { id: 46, name: 'Adidas', title: 'Sneakers', image: f2, rating: 4.6, price: 7000 },
+  { id: 46, name: 'Bruton', title: 'Sneakers', image: f2, rating: 4.6, price: 7000 },
   { id: 47, name: 'Puma', title: 'Casual Shoes', image: f3, rating: 4.5, price: 4500 },
-  { id: 48, name: 'Reebok', title: 'Walking Shoes', image: f4, rating: 4.4, price: 3000 },
-  { id: 49, name: 'Woodland', title: 'Hiking Boots', image: f5, rating: 4.7, price: 8000 },
-  { id: 50, name: 'Bata', title: 'Formal Shoes', image: f6, rating: 4.3, price: 2000 },
-  { id: 51, name: 'Skechers', title: 'Sports Shoes', image: f7, rating: 4.5, price: 6000 },
-  { id: 52, name: 'Red Chief', title: 'Leather Shoes', image: f8, rating: 4.2, price: 5500 },
-  { id: 53, name: 'Under Armour', title: 'Training Shoes', image: f9, rating: 4.6, price: 6500 },
-  { id: 54, name: 'Fila', title: 'High Tops', image: f10, rating: 4.4, price: 3000 },
+  { id: 48, name: 'Reebok', title: 'Crocs', image: f4, rating: 4.4, price: 300 },
+  { id: 49, name: 'Woodland', title: 'Mens Sport Sandal', image: f5, rating: 4.7, price: 8000 },
+  { id: 50, name: 'Bata', title: '-Black Simmer', image: f6, rating: 4.3, price: 2000 },
+  { id: 51, name: 'ORTHO JOY', title: 'Soft Sandal for women', image: f7, rating: 4.5, price: 6000 },
+  { id: 52, name: 'JM LOOKS', title: 'Casual Heel Sandal', image: f8, rating: 4.2, price: 5500 },
+  { id: 53, name: 'Airson', title: 'Slipper', image: f9, rating: 4.6, price: 150 },
+  { id: 54, name: 'LANCER', title: 'Sports shoes', image: f10, rating: 4.4, price: 650 },
   { id: 55, name: 'Asics', title: 'Running Shoes', image: f11, rating: 4.5, price: 7000 },
-  { id: 56, name: 'New Balance', title: 'Walking Shoes', image: f12, rating: 4.3, price: 5000 },
+  { id: 56, name: 'New Balance', title: 'Women Pul 139 Sandal', image: f12, rating: 4.3, price: 5000 },
 ];
 
 function Footwear() {
