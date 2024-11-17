@@ -74,11 +74,11 @@ function Header() {
 
                 {/* Location Input */}
                 <div className='location'>
-                  <div className='locationsearch' onClick={toggleLocationDropdown}>
+                  <div className='locationsearch' >
                     <LocationIcon className='location-icon' />
-                    <span className='selectdrop'>
-                      {selectedLocation}
-                      <DownArrow className='down-arrow-icon' />
+                    <span >
+                      Location
+                     
                     </span>
                     <Selectdrop 
                       isOpen={isLocationDropdownOpen} 
@@ -95,17 +95,20 @@ function Header() {
                     Wishlist
                   </div> */}
 
-                  {/* Cart Icon with Dynamic Count */}
-                  <div className='cart'>
-                    <Link to="/cart" style={{ textDecoration: 'none', color: 'black' }}>
-                      {/* Cart count will be displayed next to the cart icon */}
-                      <div className='cart-icon'>
-                        <Cart />
-                        <span className='cart-count'></span>
-                      </div>
-                      Cart
-                    </Link>
-                  </div>
+<div className='cart'>
+  <Link to="/cart" style={{ textDecoration: 'none', color: 'black' }}>
+    <div className='cart-icon'>
+      <Cart />
+      {cartItems.length > 0 && (
+        <span className='cart-count'>
+          {cartItems.length} {/* Number of items in the cart */}
+        </span>
+      )}
+    </div>
+    Cart
+  </Link>
+</div>
+
 
                   {/* Sign In Button */}
                   <div className='signin'>
@@ -130,12 +133,3 @@ export default Header;
 
 
 
-const locationOptions = [
-  "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", 
-  "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", 
-  "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", 
-  "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", 
-  "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", 
-  "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", 
-  "West Bengal"
-];

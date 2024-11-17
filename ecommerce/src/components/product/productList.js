@@ -23,11 +23,11 @@ function ProductList() {
     { id: 3, name: 'Alice Johnson', title: 'Product 3', image: P3, rating: 4.0, price: 649 },
     { id: 4, name: 'Bob Brown', title: 'Product 4', image: P4, rating: 5.0, price: 1200 },
     { id: 5, name: 'Carol White', title: 'Product 5', image: P5, rating: 2.5, price: 450 },
-    { id: 6, name: 'David Black', title: 'Product 6', image: P6, rating: 3.0, price: 699 },
-    { id: 7, name: 'Ella Blue', title: 'Product 7', image: P7, rating: 4.0, price: 849 },
-    { id: 8, name: 'Frank Green', title: 'Product 8', image: P8, rating: 3.5, price: 950 },
-    { id: 9, name: 'Grace Yellow', title: 'Product 9', image: P9, rating: 4.0, price: 1100 },
-    { id: 10, name: 'Grace Yellow', title: 'Product 9', image: P10, rating: 4.3, price: 600 },
+    { id:13, name: 'David Black', title: 'Product 6', image: P6, rating: 3.0, price: 699 },
+    { id: 14, name: 'Ella Blue', title: 'Product 7', image: P7, rating: 4.0, price: 849 },
+    { id: 15, name: 'Frank Green', title: 'Product 8', image: P8, rating: 3.5, price: 950 },
+    { id: 16, name: 'Grace Yellow', title: 'Product 9', image: P9, rating: 4.0, price: 1100 },
+    { id: 17, name: 'Grace Yellow', title: 'Product 9', image: P10, rating: 4.3, price: 600 },
   ];
 
   const { addToCart } = useCart(); // Access addToCart function from context

@@ -1,21 +1,25 @@
-// Cart.js
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useCart } from './cartcontext'; // Ensure this path is correct
 import './cart.css';
 import { useNavigate } from 'react-router-dom';
 
 function Cart() {
-  const { cart, removeFromCart, updateQuantity } = useCart();  
+  const { cart = [], removeFromCart, updateQuantity } = useCart(); // Fallback to an empty array
   const navigate = useNavigate();
 
-  const totalPrice = cart.reduce((total, product) => total + product.price * product.quantity, 0);
-  const shippingCost = 30; // Example shipping cost
-  const finalAmount = cart.length > 0 ? totalPrice + shippingCost : totalPrice;
+  // Calculate total price and other summary values safely
+  const totalPrice = cart.reduce(
+    (total, product) => total + (product.price * (product.quantity || 1)),
+    0
+  );
+  const shippingCost = cart.length > 0 ? 30 : 0; // Shipping cost only if items in cart
+  const finalAmount = totalPrice + shippingCost;
 
   const handleCheckout = () => {
     if (cart.length > 0) {
-      // Passing the cart data dynamically to checkout page
-      navigate('/checkout', { state: { cart, totalPrice, shippingCost, finalAmount } });
+      navigate('/checkout', {
+        state: { cart, totalPrice, shippingCost, finalAmount },
+      });
     }
   };
 
@@ -36,12 +40,27 @@ function Cart() {
                 <div className="product-info">
                   <div className="product-name">{product.name}</div>
                   <div className="product-quantity">
-                    <button onClick={() => updateQuantity(product.id, product.quantity - 1)}>-</button>
-                    <span>{product.quantity}</span>
-                    <button onClick={() => updateQuantity(product.id, product.quantity + 1)}>+</button>
+                    <button
+                      onClick={() =>
+                        updateQuantity(product.id, Math.max(1, product.quantity - 1))
+                      }
+                    >
+                      -
+                    </button>
+                    <span>{product.quantity || 1}</span>
+                    <button
+                      onClick={() => updateQuantity(product.id, (product.quantity || 1) + 1)}
+                    >
+                      +
+                    </button>
                   </div>
                   <div className="product-price">₹{product.price}</div>
-                  <button className="remove" onClick={() => removeFromCart(product.id)}>Remove</button>
+                  <button
+                    className="remove"
+                    onClick={() => removeFromCart(product.id)}
+                  >
+                    Remove
+                  </button>
                 </div>
               </div>
             ))
@@ -53,7 +72,11 @@ function Cart() {
           <p>Products ({cart.length}): ₹{totalPrice}</p>
           {cart.length > 0 && <p>Shipping: ₹{shippingCost}</p>}
           <p className="total-amount">Total amount: ₹{finalAmount}</p>
-          <button className="checkout-button" onClick={handleCheckout} disabled={cart.length === 0}>
+          <button
+            className="checkout-button"
+            onClick={handleCheckout}
+            disabled={cart.length === 0}
+          >
             Go to checkout
           </button>
         </div>

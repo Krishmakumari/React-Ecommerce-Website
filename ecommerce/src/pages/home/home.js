@@ -11,30 +11,6 @@ function Home() {
   return (
     <div>
       <Slider />
-      {/* <div className="categories">
-        <div className="features">
-          <h2>Featured Categories</h2>
-        </div>
-        <div className="images">
-          <div className="image-container">
-            <img src={Fashion} alt="Fashion" />
-            <h5>Fashion</h5>
-          </div>
-          <div className="image-container">
-            <img src={Fashion} alt="Fashion" />
-            <h5>Fashion</h5>
-          </div>
-          <div className="image-container">
-            <img src={Fashion} alt="Fashion" />
-            <h5>Fashion</h5>
-          </div>
-          <div className="image-container">
-            <img src={Fashion} alt="Fashion" />
-            <h5>Fashion</h5>
-          </div>
-
-        </div>
-      </div> */}
 
       <div className='products'>
         <div className='heading'>

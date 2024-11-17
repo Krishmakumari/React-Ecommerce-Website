@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Img1 from '../../assets/slider1.jpg';
+import Img1 from '../../assets/slider1.webp';
 import Img2 from '../../assets/slider2.jpg';
 import Img3 from '../../assets/slider3.jpg';
 import Img4 from '../../assets/slider4.jpg';

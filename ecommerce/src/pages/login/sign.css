@@ -7,10 +7,10 @@
   }
   
   .container {
-    width: 900px;
+    width: 800px;
     height: 500px;
     display: flex;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
     border-radius: 12px;
     overflow: hidden;
     margin-top: 2px;
@@ -18,9 +18,9 @@
   
   .left-section {
     width: 50%;
-    background-color: #45a3a0; /* Aqua Color */
-    padding: 40px;
-    color: white;
+    background-color: #6fe7bb; /* Aqua Color */
+    padding: px;
+    color: hite;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -45,6 +45,7 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 25px;
+    box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.1);
   }
   
   .right-section h2 {
@@ -89,13 +90,13 @@
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #6a1b9a;
+    background-color: #3bb997;
     color: white;
     cursor: pointer;
   }
   
   .login-button:hover, .register-button:hover {
-    background-color: #5a1380;
+    background-color: #0b6e55;
   }
   
   /* Button container */
